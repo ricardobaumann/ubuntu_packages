@@ -53,6 +53,9 @@ xvba-va-driver
 libva-glx1
 libva-egl1
 vainfo
+postgresql
+postgresql-dev
+maven
 "
 for package in $PACKAGES
 do
@@ -63,6 +66,7 @@ PACKAGES_REM="
 gnumeric
 abiword
 thunderbird
+openjdk*
 "
 for package in $PACKAGES_REM
 do
@@ -105,3 +109,33 @@ echo "sudo apt-get install -y hipchat"
 #####ATI
 echo "########Baixando driver ATI"
 wget http://www2.ati.com/drivers/linux/amd-catalyst-omega-14.12-linux-run-installers.zip
+
+##### JAVA
+echo "########Instalando oracle java"
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install -y oracle-java8-installer
+
+##### ECLIPSE
+wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
+tar -xvzf eclipse-jee-luna-SR2-linux-gtk-x86_64.tar.gz
+
+##### GLASSFISH
+wget http://dlc.sun.com.edgesuite.net/glassfish/4.1/release/glassfish-4.1.zip
+unzip glassfish-4.1.zip
+
+##### SUBLIME
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+
+##### RVM
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable --rails
+echo "source $HOME/.rvm/scripts/rvm" >> ~/.bash_profile
+source $HOME/.rvm/scripts/rvm
+rvm install 1.9.3
+rvm rvm --default use 1.9.3
+
+
+
