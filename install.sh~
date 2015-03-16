@@ -59,6 +59,7 @@ maven
 zlib1g-dev
 libxslt-dev
 libxml2-dev
+build-essential
 "
 for package in $PACKAGES
 do
