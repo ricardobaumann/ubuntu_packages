@@ -60,6 +60,7 @@ zlib1g-dev
 libxslt-dev
 libxml2-dev
 build-essential
+libmysqlclient15-dev
 "
 for package in $PACKAGES
 do
