@@ -147,5 +147,10 @@ sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) pa
 sudo apt-get update
 sudo apt-get install -y skype
 
+#### grive
+sudo add-apt-repository ppa:thefanclub/grive-tools
+sudo apt-get update
+sudo apt-get install grive-tools
+
 
 
